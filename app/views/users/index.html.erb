@@ -1,0 +1,19 @@
+<%
+  text =<<~TEXT
+    # 大見出し
+    ## 中見出し
+    ### 小見出し
+
+    # controller key on routes definitionに対する対処法
+    ## 「root」では'#'を使う
+    今回は
+
+    root to: 'users/index'
+    
+    としていてcontroller key on routes definitionというエラーが出てしまった。
+    ### root to: 'users#index'
+    とすることでエラーを解消することができた。
+  TEXT
+%>
+
+<%= markdown(text).html_safe %>
